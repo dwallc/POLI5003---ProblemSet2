@@ -34,7 +34,8 @@ summary(m1)
 
 <<label=Answer2>>=
 
-@
+@ 
+I am thinking that we are supposed to interact Dem*Income and use the same control variables as answer 2. What do you guys think about this?
 
 
 

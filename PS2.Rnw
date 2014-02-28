@@ -25,8 +25,7 @@ data.key
 \item Suppose we hypothesize that a respondent's income affects her or his attitudes toward Obama, that those with higher incomes will express cooler feelings toward him.  Controlling for age, education, gender, race, and partisanship, is this hypothesis supported?  How do you know?
 
 <<label=Answer1>>=
-m1 <- lm(obama ~ income + age + educ + female + black + dem, data=obama)
-summary(m1)
+
 @
 
 

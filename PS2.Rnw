@@ -7,7 +7,11 @@
 \pagestyle{empty}
 
 \begin{center}
-{\Large \textbf{POLS 500c: Problem Set \# 3}}
+{\Large \textbf{POLS 5003: Problem Set \# 2}}
+\linebreak
+Team Members: Christopher Eubanks, Dongkyu Kim, and Desmond Wallace
+\linebreak
+Date: March 3, 2014
 \end{center}
 
 The dataset \texttt{Obama.dta} is a subset of the 2008 American National Election Survey.  We will use it to examine attitudes toward Barack Obama, using the feeling thermometer \texttt{obama}.
@@ -21,23 +25,42 @@ data.key <- data.frame(var.name=names(obama),var.labels)
 data.key
 @
 
+<<label=setup, echo=FALSE, results=hide>>=
+ipak <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+
+packages <- c("ggplot2", "RCurl", "stargazer")
+ipak(packages)
+@
+
+
 \begin{enumerate}
 \item Suppose we hypothesize that a respondent's income affects her or his attitudes toward Obama, that those with higher incomes will express cooler feelings toward him.  Controlling for age, education, gender, race, and partisanship, is this hypothesis supported?  How do you know?
 
 <<label=Answer1>>=
-m1 <- lm(obama ~ income + age + educ + female + black + dem, data=obama)
+m1 <- lm(obama ~ income + age + educ + female + black + dem + rep, data=obama)
 summary(m1)
 @
 
+According to the results above, the coefficient for \texttt{income}, representing household income in thousands of dollars, is -0.0333. This means that for every \$1,000 increase in household income, respondents' feelings toward Obama will decrease by three and one-third points. This coefficient is statistically significant at $\alpha=0.01$. Based on these results, there is sufficient support for the hypothesis that a respondent's income affects their attitudes towards President Obama.
 
 \item Suppose we think Democrats' feelings toward Obama will be less influenced by their incomes than others' feelings are.  Is there support for this conditional hypothesis?  How do you know?\\
 
 <<label=Answer2>>=
-
+m2 <- lm(obama ~ income + age + educ + female + black 
+         + dem + rep + dem:income, data=obama)
+summary(m2)
 @ 
-I am thinking that we are supposed to interact Dem*Income and use the same control variables as answer 2. What do you guys think about this?
 
+<<label=Table1, results=tex, echo=FALSE>>=
+stargazer(m1, m2, title="Linear Regression Results", dep.var.labels="Obama Feeling Thermometer", covariate.labels=c("Household Income (Thousands)", "Age ","Education","Gender","Race","Democrat","Republican","Democrat:Income"), align=FALSE, omit.stat=c("adj.rsq", "f", "ser"), label="T:res", no.space=TRUE)
+@
 
+According to the results above, the coefficient for \texttt{income}, representing household income in thousands of dollars, is -0.0535.This means that for every \$1,000 increase in household income, there is a 53.84 point decrease in Obama's feeling thermometer for respondents who self-identify as non-Democrats, hlding all other factors constant. For respondents who self-identify as Democrats, there is a 14.33 point increase for every \$1,000 increase, again holding all other factors constant. Not only doess \texttt{income} remain statistically significant in this model, the included interaction term is significant when $\alpha=0.01$. Based on this information, there is sufficient evidence to conlcude there is support for the conditional hypothesis. In other words, Democrats' feelings toward Obama are less influenced by their incomes than others' feelings are.
 
 \item Does income have a statistically significant effect on the feelings toward Obama of those who aren't Democrats?  On the feelings of Democrats?  Report the estimated effect and $p$-value for each.\\
 

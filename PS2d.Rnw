@@ -108,7 +108,7 @@ dem.coef.plot
   \end{center}
 \end{figure}
 
-According to the figure below, it appears that household income has a positive effect on the coefficient \texttt{dem}. In other words, as income increases, the effect being a self-identified Democrat has on respondents' feelings towards President Obama increases as well.
+According to the figure below, it appears that household income has a positive effect on the coefficient \texttt{dem}. In other words, as income increases, the effect being a self-identified Democrat has on respondents' feelings towards President Obama increases as well, holding other factors constant.
 
 \newpage
 

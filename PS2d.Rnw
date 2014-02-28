@@ -50,6 +50,7 @@ summary(m1)
 
 According to the results above, the coefficient for \texttt{income}, representing household income in thousands of dollars, is -0.0333. This means that for every \$1,000 increase in household income, respondents' feelings toward Obama will decrease by three and one-third points. This coefficient is statistically significant at $\alpha=0.01$. Based on these results, there is sufficient support for the hypothesis that a respondent's income affects their attitudes towards President Obama.
 
+
 \item Suppose we think Democrats' feelings toward Obama will be less influenced by their incomes than others' feelings are.  Is there support for this conditional hypothesis?  How do you know?\\
 
 <<label=Answer2>>=

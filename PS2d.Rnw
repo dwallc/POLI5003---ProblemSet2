@@ -72,6 +72,8 @@ summary(m3)
 
 According to the results from question \#2, respondents who self-identify as non-Democrats, household income does have a statistically significant effect on their feelings towards Obama, with a coefficient value of -0.0333 and a $p$-value less than $2x10^{-16}$, well below $\alpha=0.05$. In order to answer the second part of the question, we had to change the reference level of the model, so now we can show the effect income has on respondents self-identified as Democrats. According to this new model, household income does \emph{not} have a statistically significant effect on Democrats' feelings towards Obama, with a coefficient value of 0.0143 and a $p$-value of 0.4285, well above $\alpha=0.05$.
 
+
+
 \item Suppose we were really more interested in how being a Democrat affects feelings towards Obama.  What effect does income have on this effect?  Graph your answer and insert the graph in your \LaTeX~file.\\
 
 <<label=Answer4, echo=F, fig=T, include=F, width=9, height = 6>>=

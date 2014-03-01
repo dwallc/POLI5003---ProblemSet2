@@ -11,7 +11,7 @@
 \begin{center}
 {\Large \textbf{POLS 5003: Problem Set \# 2}}
 \linebreak
-Team Members: Christopher Eubanks, Dongkyu Kim, and Desmond Wallace
+Team Members: Christopher Eubanks and Desmond Wallace
 \linebreak
 Date: March 3, 2014
 \end{center}

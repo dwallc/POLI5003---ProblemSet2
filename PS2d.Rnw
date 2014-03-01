@@ -99,6 +99,8 @@ dem.coef.plot <- ggplot(coef.dem, aes(x = fake_income, y = coef_dem)) +
 dem.coef.plot
 @
 
+According to the figure below, it appears that household income has a positive effect on the coefficient \texttt{dem}. In other words, as income increases, the effect being a self-identified Democrat has on respondents' feelings towards President Obama increases as well, holding other factors constant.
+
 \begin{figure}[htbp] 
   \caption{Effect of Income on the Effect Being A Democrat Has on Respondents' Feelings Towards Obama}
   \label{F:spread}
@@ -106,8 +108,6 @@ dem.coef.plot
     \includegraphics[width=5.25in]{PS2d-Answer4.pdf}
   \end{center}
 \end{figure}
-
-According to the figure below, it appears that household income has a positive effect on the coefficient \texttt{dem}. In other words, as income increases, the effect being a self-identified Democrat has on respondents' feelings towards President Obama increases as well, holding other factors constant.
 
 \newpage
 

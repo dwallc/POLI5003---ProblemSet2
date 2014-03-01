@@ -39,7 +39,6 @@ packages <- c("ggplot2", "RCurl", "stargazer", "arm")
 ipak(packages)
 @
 
-
 \begin{enumerate}
 \item Suppose we hypothesize that a respondent's income affects her or his attitudes toward Obama, that those with higher incomes will express cooler feelings toward him.  Controlling for age, education, gender, race, and partisanship, is this hypothesis supported?  How do you know?
 
@@ -48,8 +47,7 @@ m1 <- lm(obama ~ income + age + educ + female + black + dem + rep, data=obama)
 summary(m1)
 @
 
-According to the results above, the coefficient for \texttt{income}, representing household income in thousands of dollars, is -0.0333. This means that for every \$1,000 increase in household income, respondents' feelings toward Obama will decrease by three and one-third points. This coefficient is statistically significant at $\alpha=0.01$. Based on these results, there is sufficient support for the hypothesis that a respondent's income affects their attitudes towards President Obama.
-
+According to the results above, the coefficient for \texttt{income}, representing household income in thousands of dollars, is -0.0333. This means that for every \$1,000 increase in household income, respondents' feelings toward Obama will decrease by 0.0333 points. This coefficient is statistically significant at $\alpha=0.01$. Based on these results, there is sufficient support for the hypothesis that a respondent's income affects their attitudes towards President Obama. Not only does household income affects respondents' feelings towards Obama, household income has a statistically significant \emph{negative} effect.
 
 \item Suppose we think Democrats' feelings toward Obama will be less influenced by their incomes than others' feelings are.  Is there support for this conditional hypothesis?  How do you know?\\
 
@@ -59,8 +57,12 @@ m2 <- lm(obama ~ income + age + educ + female + black
 summary(m2)
 @ 
 
+<<<<<<< HEAD
 According to the results above, the coefficient for \texttt{income}, representing household income in thousands of dollars, is -0.0535.This means that for every \$1,000 increase in household income, there is a 53.48 point decrease in Obama's feeling thermometer for respondents who self-identify as non-Democrats, hOlding all other factors constant. For respondents who self-identify as Democrats, there is a 14.33 point increase for every \$1,000 increase, again holding all other factors constant. Not only doess \texttt{income} remain statistically significant in this model, the included interaction term is significant when $\alpha=0.01$. Based on this information, there is sufficient evidence to conlcude there is support for the conditional hypothesis. In other words, Democrats' feelings toward Obama are less influenced by their incomes than others' feelings are.
 
+=======
+According to the results above, the coefficient for \texttt{income}, representing household income in thousands of dollars, is -0.0535. This means that for every \$1,000 increase in household income, there is an approximately 0.0535 point decrease in Obama's feeling thermometer for respondents who self-identify as non-Democrats, holding all other factors constant. For respondents who self-identify as Democrats, there is a 0.0143 point increase for every \$1,000 increase, again holding all other factors constant. Not only doess \texttt{income} remain statistically significant in this model, the included interaction term is significant when $\alpha=0.01$. Although these two values have different signs, it appears that income has a larger effect on respondents who self-identify as non-Democrats. Based on this information, there is sufficient evidence to conlcude there is support for the conditional hypothesis. In other words, Democrats' feelings toward Obama are less influenced by their incomes than others' feelings are.
+>>>>>>> b40015cff55e182cc196ece6094f92d64ea7b814
 
 \item Does income have a statistically significant effect on the feelings toward Obama of those who aren't Democrats?  On the feelings of Democrats?  Report the estimated effect and $p$-value for each.\\
 
@@ -71,7 +73,7 @@ m3 <- lm(obama ~ income + age + educ + female +
 summary(m3)
 @
 
-According to the results from question \#2, respondents who self-identify as non-Democrats, household income does have a statistically significant effect on their feelings towards Obama, with a coefficient value of -0.0333 and a $p$-value less than $2x10^{-16}$, well below $\alpha=0.05$. In order to answer the second part of the question, we had to change the reference level of the model, so now we can show the effect income has on respondents self-identified as Democrats. According to this new model, household income does \emph{not} have a statistically significant effect on Democrats' feelings towards Obama, with a coefficient value of 0.0143 and a $p$-value of 0.4285, well above $\alpha=0.05$.
+According to the results from question \#2, for respondents who self-identify as non-Democrats, household income does have a statistically significant effect on their feelings towards Obama, with a coefficient value of -0.0333 and a $p$-value less than $2x10^{-16}$, well below $\alpha=0.05$. This result implies that all the other factors remain constant. In order to answer the second part of the question, we had to change the reference level of the model, so now we can show the effect income has on respondents self-identified as Democrats. According to this new model, household income does \emph{not} have a statistically significant effect on Democrats' feelings towards Obama, with a coefficient value of 0.0143 and a $p$-value of 0.4285, well above $\alpha=0.05$, holding all other factors constant.
 
 \item Suppose we were really more interested in how being a Democrat affects feelings towards Obama.  What effect does income have on this effect?  Graph your answer and insert the graph in your \LaTeX~file.\\
 
@@ -102,6 +104,8 @@ dem.coef.plot <- ggplot(coef.dem, aes(x = fake_income, y = coef_dem)) +
 dem.coef.plot
 @
 
+According to the figure below, it appears that household income has a positive effect on the coefficient \texttt{dem}. In other words, as income increases, the effect being a self-identified Democrat has on respondents' feelings towards President Obama increases as well, holding other factors constant.
+
 \begin{figure}[htbp] 
   \caption{Effect of Income on the Effect Being A Democrat Has on Respondents' Feelings Towards Obama}
   \label{F:spread}
@@ -109,8 +113,6 @@ dem.coef.plot
     \includegraphics[width=5.25in]{PS2d-Answer4.pdf}
   \end{center}
 \end{figure}
-
-According to the figure below, it appears that household income has a positive effect on the coefficient \texttt{dem}. In other words, as income increases, the effect being a self-identified Democrat has on respondents' feelings towards President Obama increases as well, holding other factors constant.
 
 \newpage
 

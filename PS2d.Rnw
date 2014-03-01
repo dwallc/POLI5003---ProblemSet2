@@ -9,7 +9,7 @@
 \pagestyle{empty}
 
 \begin{center}
-{\Large \textbf{POLS 5003: Problem Set \# 2}}
+{\Large \textbf{POLS 5003: Problem Set \# 2 - Team D's Answers}}
 \linebreak
 Team Members: Christopher Eubanks, Dongkyu Kim, and Desmond Wallace
 \linebreak

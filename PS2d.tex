@@ -185,83 +185,47 @@ According to the figure below, it appears that household income has a positive e
 \newpage
 
 % Table created by stargazer v.4.5.3 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Sat, Mar 01, 2014 - 1:47:52 PM
+% Date and time: Sat, Mar 01, 2014 - 2:09:50 PM
 % Requires LaTeX packages: dcolumn 
 \begin{table}[!htbp] \centering 
   \caption{Linear Regression Results (Q1 and Q2)} 
   \label{T:res} 
-\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
-\cline{2-3} 
-\\[-1.8ex] & \multicolumn{2}{c}{Obama Feeling Thermometer} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Obama Feeling Thermometer} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
 \hline \\[-1.8ex] 
- Household Income (In Thousands) & -0.033^{***} & -0.053^{***} \\ 
-  & (0.010) & (0.012) \\ 
-  Age  & -0.035 & -0.030 \\ 
-  & (0.030) & (0.030) \\ 
-  Education & 0.049 & -0.004 \\ 
-  & (0.211) & (0.211) \\ 
-  Gender & 4.485^{***} & 4.433^{***} \\ 
-  & (0.996) & (0.993) \\ 
-  Race & 16.766^{***} & 17.071^{***} \\ 
-  & (1.226) & (1.227) \\ 
-  Democrat & 13.768^{***} & 10.504^{***} \\ 
-  & (1.145) & (1.527) \\ 
-  Republican & -16.718^{***} & -16.010^{***} \\ 
-  & (1.409) & (1.423) \\ 
-  Democrat:Income &  & 0.068^{***} \\ 
-  &  & (0.021) \\ 
-  Constant & 60.203^{***} & 61.667^{***} \\ 
-  & (3.248) & (3.272) \\ 
+ Household Income (In Thousands) & -0.033^{***} & -0.053^{***} & 0.014 \\ 
+  & (0.010) & (0.012) & (0.018) \\ 
+  Age  & -0.035 & -0.030 & -0.030 \\ 
+  & (0.030) & (0.030) & (0.030) \\ 
+  Education & 0.049 & -0.004 & -0.004 \\ 
+  & (0.211) & (0.211) & (0.211) \\ 
+  Gender & 4.485^{***} & 4.433^{***} & 4.433^{***} \\ 
+  & (0.996) & (0.993) & (0.993) \\ 
+  Race & 16.766^{***} & 17.071^{***} & 17.071^{***} \\ 
+  & (1.226) & (1.227) & (1.227) \\ 
+  Democrat & 13.768^{***} & 10.504^{***} &  \\ 
+  & (1.145) & (1.527) &  \\ 
+  Non-Democrat &  &  & -10.504^{***} \\ 
+  &  &  & (1.527) \\ 
+  Republican & -16.718^{***} & -16.010^{***} & -16.010^{***} \\ 
+  & (1.409) & (1.423) & (1.423) \\ 
+  Democrat:Income &  & 0.068^{***} &  \\ 
+  &  & (0.021) &  \\ 
+  Non-Democrat &  &  & -0.068^{***} \\ 
+  &  &  & (0.021) \\ 
+  Constant & 60.203^{***} & 61.667^{***} & 72.171^{***} \\ 
+  & (3.248) & (3.272) & (3.439) \\ 
  \hline \\[-1.8ex] 
-Observations & \multicolumn{1}{c}{1,858} & \multicolumn{1}{c}{1,858} \\ 
-R$^{2}$ & \multicolumn{1}{c}{0.378} & \multicolumn{1}{c}{0.381} \\ 
+Observations & \multicolumn{1}{c}{1,858} & \multicolumn{1}{c}{1,858} & \multicolumn{1}{c}{1,858} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.378} & \multicolumn{1}{c}{0.381} & \multicolumn{1}{c}{0.381} \\ 
 \hline 
 \hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-\normalsize 
-\end{tabular} 
-\end{table} 
-% Table created by stargazer v.4.5.3 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Sat, Mar 01, 2014 - 1:47:53 PM
-% Requires LaTeX packages: dcolumn 
-\begin{table}[!htbp] \centering 
-  \caption{Linear Regression Results (Q3)} 
-  \label{T:res} 
-\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} } 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
- & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
-\cline{2-2} 
-\\[-1.8ex] & \multicolumn{1}{c}{Obama Feeling Thermometer} \\ 
-\hline \\[-1.8ex] 
- Household Income (In Thousands) & 0.014 \\ 
-  & (0.018) \\ 
-  Age  & -0.030 \\ 
-  & (0.030) \\ 
-  Education & -0.004 \\ 
-  & (0.211) \\ 
-  Gender & 4.433^{***} \\ 
-  & (0.993) \\ 
-  Race & 17.071^{***} \\ 
-  & (1.227) \\ 
-  Non-Democrat & -10.504^{***} \\ 
-  & (1.527) \\ 
-  Republican & -16.010^{***} \\ 
-  & (1.423) \\ 
-  Non-Democrat:Income & -0.068^{***} \\ 
-  & (0.021) \\ 
-  Constant & 72.171^{***} \\ 
-  & (3.439) \\ 
- \hline \\[-1.8ex] 
-Observations & \multicolumn{1}{c}{1,858} \\ 
-R$^{2}$ & \multicolumn{1}{c}{0.381} \\ 
-\hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 \normalsize 
 \end{tabular} 
 \end{table} 

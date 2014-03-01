@@ -113,11 +113,7 @@ According to the figure below, it appears that household income has a positive e
 \newpage
 
 <<label=Table1, results=tex, echo=FALSE>>=
-stargazer(m1, m2, title="Linear Regression Results (Q1 and Q2)", dep.var.labels="Obama Feeling Thermometer", covariate.labels=c("Household Income (In Thousands)", "Age ","Education","Gender","Race","Democrat","Republican","Democrat:Income"), align=TRUE, omit.stat=c("adj.rsq", "f", "ser"), label="T:res", no.space=TRUE)
-@
-
-<<label=Table2, results=tex, echo=FALSE>>=
-stargazer(m3, title="Linear Regression Results (Q3)", dep.var.labels="Obama Feeling Thermometer", covariate.labels=c("Household Income (In Thousands)", "Age ","Education","Gender","Race","Non-Democrat","Republican","Non-Democrat:Income"), align=TRUE, omit.stat=c("adj.rsq", "f", "ser"), label="T:res", no.space=TRUE)
+stargazer(m1, m2, m3, title="Linear Regression Results (Q1 and Q2)", dep.var.labels="Obama Feeling Thermometer", covariate.labels=c("Household Income (In Thousands)", "Age ","Education","Gender","Race","Democrat", "Non-Democrat", "Republican","Democrat:Income", "Non-Democrat"), align=TRUE, omit.stat=c("adj.rsq", "f", "ser"), label="T:res", no.space=TRUE)
 @
 
 \end{enumerate}
